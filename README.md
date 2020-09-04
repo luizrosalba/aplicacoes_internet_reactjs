@@ -44,6 +44,7 @@ const listaEstilizada = {
   padding: '25px'
 };
 ```
+- Os estilos pela tag style são feitos por um JSON onde o CSS é escrito CamelCase.
 ### classes 
 - pros Modularizada define-se classes pelo atributo classname 
 - contra dificil manutencao 
@@ -67,6 +68,7 @@ function Hello(){
 ```
 ###  Css no JS 
 - npm install --save styled-components
+- A biblioteca styled components é exemplo de uma biblioteca em que se pode usar CSS in JS.
 - pros:  manutenção facilidade para remover css estilos dinamicos performance injeção automatica de prefixos vendor 
 ```
 const DivStyle = styled.div`
@@ -86,10 +88,13 @@ function Hello(){
 - Dessa forma temos um código compatco com a vantagem de poder manipular estaods 
 ### Stateful 
 - Stateful usa estados toda vez que trabalhamos com estados , destruimos uma copia anterior e trabalhamos com uma nova cópia do estado 
+- Supondo um estado chamado shoe, setado inicialmente como ‘tênis’, podemos trocar o seu estado, por ex, usando this.setState({ shoe: 'sapatenis’ }).
+
 ![](img/state.PNG)
 - ..\aplicacoes_internet_reactjs\src\aula-1\parte-2\TodoListStatefull.jsx
 ### Stateless 
 - stateless não usa estados
+- Podemos setar o estado inicial de um componente stateless com props.
 - Não possui gerenciamento de estados no componente
 - contruidos usando funções em js 
 - ..\aplicacoes_internet_reactjs\src\aula-1\parte-2\TodoListStateless.jsx
