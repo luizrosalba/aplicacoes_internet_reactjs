@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-class TodoListStatefull extends Component {
+/// o this. state poderia vir por props e nao hard-coded 
 
+class TodoListStatefull extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +13,6 @@ class TodoListStatefull extends Component {
       ]
     }
   }
-
   addItem = (item) => {
     /*
     [...this.state.items, item] é o mesmo que:
@@ -41,7 +41,7 @@ class TodoListStatefull extends Component {
         <ul className="lista-estilizada">
           {items.map(item => <li>{item}</li>)}
         </ul>
-        <button onClick={() => this.addItem('Abóbora')}>Adicionar item</button>
+        <button onClick={() => this.addItem('Batata Frita')}>Adicionar item</button>
         <button onClick={() => this.removeItem()}>Remover item</button>
       </div>
     )

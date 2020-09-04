@@ -28,9 +28,91 @@ Veja mais na seção [deployment](https://facebook.github.io/create-react-app/do
 # Desenvolvimento de aplicações para internet com ReactJS
 
 ## Css componentes e elementos 
+Como estilizar ? 
+### inline 
+Dentro do arquivo jsx 
+- Pros  : Pratico , direta , ajuste  rapido  e testes de estilo 
+- contra - manutenção 
+```
+import React from 'react';
 
+// 1. Como estilizar uma lista usando estilos inline.
+
+const listaEstilizada = {
+  marginTop: '10px',
+  border: '1px solid blue',
+  padding: '25px'
+};
+```
+### classes 
+- pros Modularizada define-se classes pelo atributo classname 
+- contra dificil manutencao 
+- pouca flexibilidade 
+- conflitos de nomes (solução: Design patterns)
+- arquivo ClassName.css
+```
+.div-style {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-around;
+  margin-right: 20px;
+}
+``` 
+e depois importa-se no codigo , usamos className e não class para poder importa-lo no react 
+```
+import './ClassName.css'
+function Hello(){
+    return <div className="div-style"> Ola mundo </div>
+}
+```
+###  Css no JS 
+- npm install --save styled-components
+- pros:  manutenção facilidade para remover css estilos dinamicos performance injeção automatica de prefixos vendor 
+```
+const DivStyle = styled.div`
+  color:blue;
+  background: url('${props=> props.imageUrl}');
+`; 
+function Hello(){
+    const url = 'https://exemplo'
+    return <DivStyle imageUrl={url}> Olá </DivStyle>
+}
+``` 
 ## Stateful vs StateLess 
-
+- A nomenclatura foi atualaizada : 
+- Class components
+- Function Components 
+- Com hooks estados são manipuláveis em function components (Stateless com Hooks )
+- Dessa forma temos um código compatco com a vantagem de poder manipular estaods 
+### Stateful 
+- Stateful usa estados toda vez que trabalhamos com estados , destruimos uma copia anterior e trabalhamos com uma nova cópia do estado 
+![](img/state.PNG)
+- ..\aplicacoes_internet_reactjs\src\aula-1\parte-2\TodoListStatefull.jsx
+### Stateless 
+- stateless não usa estados
+- Não possui gerenciamento de estados no componente
+- contruidos usando funções em js 
+- ..\aplicacoes_internet_reactjs\src\aula-1\parte-2\TodoListStateless.jsx
+### Stateless com Hooks 
+A partir de 2018 , podemos fazer um "stateless com estados" usando o hook useState 
+- ..\aplicacoes_internet_reactjs\src\aula-1\parte-2\TodoListFunctional.jsx
 ## Formulários
+Mantem um estado interno 
+- Em html <input>, <textarea> e <select> tem um estado interno aceitando atributo value 
+- podemos mudar esse valor usando o atributo onChange 
+- em react podemos controlar o estado ( O DOM tem seu proprio estado e o react tem seu proprio estado ) 
+- state 
+- set state 
+## Componente controlado 
+- O recomendado no react é fazer componentes controlados 
 
+## Compomente não controlado 
+- pega o estado do dom 
+- o react observa estes estados através de uma referencia 
+- a tag input é read-only (essa tag a gente nao consegue fazer com componente controlado, só com não controlado)
+## bibliotecas 
+- forms no react são verbosos 
+- é possível usar algumas biblios : 
+- formik 
+- Redux-forms 
 

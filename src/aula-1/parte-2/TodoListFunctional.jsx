@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-
+/// componentes funcionais com estado 
 const TodoListFunctional = () => {
-
+/// hook para criacao de estados 
   const [items, setItems] = useState(['Tomate','Alface','Melancia']);
   const addItem = (item) => {
     setItems([...items, item]);
@@ -17,7 +17,7 @@ const TodoListFunctional = () => {
       <ul className="lista-estilizada">
         {items.map(item => <li>{item}</li>)}
       </ul>
-      <button onClick={() => addItem('Abóbora')}>Add Item</button>
+      <button onClick={() => addItem('Batata-Frita2')}>Add Item</button>
       <button onClick={() => removeItem()}>Remove Item</button>
     </div>
   );

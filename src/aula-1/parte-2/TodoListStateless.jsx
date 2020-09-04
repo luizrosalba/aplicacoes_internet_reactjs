@@ -1,5 +1,6 @@
 import React from 'react';
 
+/// items vem via props 
 const TodoListStateless = ({items}) => (
   <div className="bloco-lista">
     <p>Minha lista Stateless</p>
