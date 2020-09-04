@@ -98,7 +98,13 @@ A partir de 2018 , podemos fazer um "stateless com estados" usando o hook useSta
 - ..\aplicacoes_internet_reactjs\src\aula-1\parte-2\TodoListFunctional.jsx
 ## Formulários
 Mantem um estado interno 
-- Em html <input>, <textarea> e <select> tem um estado interno aceitando atributo value 
+- Em html 
+``` 
+<input>,
+ <textarea> e 
+ <select> 
+ ```
+ tem um estado interno aceitando atributo value 
 - podemos mudar esse valor usando o atributo onChange 
 - em react podemos controlar o estado ( O DOM tem seu proprio estado e o react tem seu proprio estado ) 
 - state 
