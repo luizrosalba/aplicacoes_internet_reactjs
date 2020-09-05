@@ -194,7 +194,7 @@ Instalar o redux dev tools
 - usamos o redux dev tools e rodamos a aula 2 para ver que cada vez que o contador eh clicado vemos o estado anterior e o estado atual 
 - criamos a pasta redux que tem o arquivo de actions  (mensagem enviada)
 
-- 
+# Aula 3 
 
 
 
