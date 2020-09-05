@@ -117,7 +117,7 @@ Mantem um estado interno
 ## Componente controlado 
 - O recomendado no react é fazer componentes controlados 
 
-## Compomente não controlado 
+## Componente não controlado 
 - pega o estado do dom 
 - o react observa estes estados através de uma referencia 
 - a tag input é read-only (essa tag a gente nao consegue fazer com componente controlado, só com não controlado)
@@ -126,4 +126,69 @@ Mantem um estado interno
 - é possível usar algumas biblios : 
 - formik 
 - Redux-forms 
+# Flux 
+- Arquitetura criada pelo Fb para comunicação entre componentes 
+- falta de sincronização entre os componentes de notificação no facebook 
+- haviam patterns para trafegar dados em aplicações web mas nada muito promissor 
+-  Fb criou o flux e resolveu o problema
+- padrão para trafego de dados unidirecional 
+![](img/flux.PNG)
+
+## Action  
+- Formata a mensagem a ser enviada (telégrafo)
+ ## Dispatcher
+ - Sabe todos os callbacks para diferentes Stores  (telefonista)
+ ## Store
+ É um gerente supercontrolador, guarda a informação e todas as alterações tem que ser feitas por ele mesmo mais ninguem 
+ ## View 
+Gerente intermediario (middleware) recebe as notificações da store e passa os dados para as visões abaixo dela 
+## Arquitetura Flux
+Diversas implementações 
+- Redux ( mais popular)
+- Reflux
+- Mobx 
+- Vuex (Baseado em Redux e Elm)
+- NgRx/store (badeada em REdux e RxJs)
+- FB disponibiliza as libs para que você construa sua própria flux 
+- não existe uma implementação padrão do flux 
+- servem para comunicação entre componentes 
+- centralizam a informação 
+- One way data flow 
+- Ideal é usar as stores para dados que vão ser compartilhados entre componentes, não todos os dados 
+# O que é Redux 
+- Criado por Abramov e Clark em 2015 
+- Redux é uma  implementação de flux 
+![](img/redux.PNG)
+-Redux tem  3 princípios : 
+- Single source of Thuth - uma única store 
+- State é read-only 
+- mudanças são feitas por funções puras ( estado imutável ) 
+
+- Redux nao tem dispatcher 
+- A camada de view eh chamada de react
+- Reducer 
+## actions 
+- são como as do flux 
+- apensa retornam um objeto de action formatado 
+## Store 
+- unica store
+- cuida de toda árvore de estados 
+- reducers cuidam de descobrir qual estado muda 
+## reducers 
+- simplifica e divide o tarbalho da store
+- se conecta ao root reducer que divide os estados em pequenos reducers para descobrir como lidar com eese estado 
+- estados imutáveis 
+## Views 
+- Em react adiciona na camada de View 3 novos conceitos para conectar a View a Store 
+- Provider wrapper da arvore de components, torna mais facil os componentes filhos se conectarem usando o connect 
+- Connect  função no react redux se o componente deseja pegar os updates do estado se envolve na função connect 
+- Selector função que escrevemos que definem quais os estados do redux que queremos passar 
+
+
+
+
+
+
+
+
 
