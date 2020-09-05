@@ -170,6 +170,7 @@ Diversas implementações
 ## actions 
 - são como as do flux 
 - apensa retornam um objeto de action formatado 
+- As actions formatam a mensagem a ser enviada para o dispatcher.
 ## Store 
 - unica store
 - cuida de toda árvore de estados 
@@ -183,8 +184,17 @@ Diversas implementações
 - Provider wrapper da arvore de components, torna mais facil os componentes filhos se conectarem usando o connect 
 - Connect  função no react redux se o componente deseja pegar os updates do estado se envolve na função connect 
 - Selector função que escrevemos que definem quais os estados do redux que queremos passar 
+No root component:
+O Provider recebe como atributo a store criada, usando-a onde ela for necessária para a aplicação.
+## Aula 2.3 
+Instalar o redux dev tools 
+- https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=pt-BR
+- npm install react-redux
+- npm install --save-dev redux-devtools
+- usamos o redux dev tools e rodamos a aula 2 para ver que cada vez que o contador eh clicado vemos o estado anterior e o estado atual 
+- criamos a pasta redux que tem o arquivo de actions  (mensagem enviada)
 
-
+- 
 
 
 

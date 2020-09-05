@@ -5,11 +5,11 @@ class Counter extends React.Component {
   state = { count: 0 }
 
   increment = () => {
-    this.props.dispatch({ type: 'INCREMENT' });
+    this.props.dispatch({ type: 'INCREMENT' }); /// cada um dispara um evento na store , não temos dispatch , ams por questões de engerharia usamos o nome dispatcher
   }
 
   decrement = () => {
-    this.props.dispatch({ type: 'DECREMENT' });
+    this.props.dispatch({ type: 'DECREMENT' }); /// nao passamos o estado do counter para o componente, disparamos uma mensagem para incrementar e decrementar
   }
 
   render() {
@@ -28,8 +28,8 @@ class Counter extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    count: state.counter.count
+    count: state.counter.count /// passamos o estaod referenciando o estado da store que estamos associando , e qqual compoenente local está associado 
   };
 }
 
-export default connect(mapStateToProps)(Counter);
+export default connect(mapStateToProps)(Counter); /// connect pega o componente com a store 
