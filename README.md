@@ -348,6 +348,8 @@ outras libs
 
 -  iremos chamar a api de cientistas para dentro do redux 
 
+## Aula 4 - Conceitos de Qualidade de código e automação de testes em React 
+
 
 
 
