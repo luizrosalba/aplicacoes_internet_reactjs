@@ -195,6 +195,52 @@ Instalar o redux dev tools
 - criamos a pasta redux que tem o arquivo de actions  (mensagem enviada)
 
 # Aula 3 
+## Comunicação avançada entre aplicações 
+
+## rest http com react 
+
+Apis HTTP 
+Servem para conectar um ou mais servidores http 
+- get 
+- post 
+- delete 
+- put 
+- fetch api (nativamente) Jquery ajax 
+- Axios (lib http muito usada com react)
+## Fetch Api 
+Alguns browsers ainda nao suportam (talvez melhor usar node fetch)
+- nativa do browser 
+- Oferece uma alternatuva ai XMLHttpRequest() e jQuery.ajax()
+- suporte a service workers
+- algumas diferenças 
+- nao envia nem recebe cookies ( precisa definir a opção cedentials)
+- nao rejeita o statudos do erro HTTP (nem 400 nem 500)
+- ele está mostrando como montar os métodos HTTP para nossa api "cientistas" aula 3 . 
+![](img/get_fetchapi.PNG)
+![](img/put_fetchapi.PNG)
+![](img/post_fetchapi.PNG)
+![](img/delete_fetchapi.PNG)
+
+
+## Axios 
+- Lib de HTTP API 
+- Cross-Browser
+- Pode monitorar o progresso de um request 
+- melhor tratamento de erros 
+- melhor teste 
+- bem restrito ao pwa 
+- npm add axios 
+- métodos HTTP : 
+![](img/get_axios.PNG)
+![](img/put_axios.PNG)
+![](img/post_axios.PNG)
+![](img/delete_axios.PNG)
+
+
+## Imutabilidade e Redux 
+
+
+
 
 
 
