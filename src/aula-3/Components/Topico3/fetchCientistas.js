@@ -9,7 +9,7 @@ function fetchCientistas() {
         if (res.error) {
           throw (res.error);
         }
-        dispatch(fetchCientistasSuccess(res));
+        dispatch(fetchCientistasSuccess(res)); /// sucesso atualiza os dados 
       })
       .catch(error => {
         dispatch(fetchCientistasError(error));

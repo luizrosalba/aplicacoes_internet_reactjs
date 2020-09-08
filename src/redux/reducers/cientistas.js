@@ -17,7 +17,7 @@ export function cientistasReducer(state = initialState, action) {
             return {
                 ...state,
                 pending: false,
-                cientistas: [...action.cientistas]
+                cientistas: [...action.cientistas] /// pega de maneira imutavel 
             }
         case FETCH_CIENTISTAS_ERROR:
             return {
@@ -30,6 +30,7 @@ export function cientistasReducer(state = initialState, action) {
     }
 }
 
+//// mapeando os states no connect com o props 
 export const getCientistas = state => state.cientistas.cientistas;
 export const getCientistasPending = state => state.cientistas.pending;
 export const getCientistasError = state => state.cientistas.error;

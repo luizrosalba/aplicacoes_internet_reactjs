@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'; /// cria as stores e associa o redux a ela 
-import rootReducer from './redux/reducers/rootReducer'
+import rootReducer from './redux/reducers/rootReducer' /// centraliza os reducers
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 

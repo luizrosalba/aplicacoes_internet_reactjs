@@ -30,13 +30,13 @@ class Topico3 extends Component {
     }
   }
 
-  componentDidMount() {
+  componentDidMount() { /// chama a fetchcientistas 
     const { fetchCientistas } = this.props;
     fetchCientistas();
   }
 
   render() {
-    const { cientistas } = this.state;
+    const { cientistas } = this.state; /// estado mapeado no redux 
     return (
       <Topico1Block>
         <h1>Cientistas Brasileiras</h1>
