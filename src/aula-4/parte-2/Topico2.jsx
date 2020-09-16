@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Item = (item, index) => {
-    debugger
+    debugger  /// aciona o debbuger dentro da aplicação 
     return <li key={index}>{item}</li>
 }
 

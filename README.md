@@ -399,6 +399,46 @@ Cenário: Como um usuário invalido , devo visualizar uma mensagem de erro e con
 - npm add --dev jest-cucumber (existe uma extensão para Vs code para .feature)
 - Chai 
 
+## Debbugin 
+
+Depuração , processo de encontrar e reduzir defeitos de um software 
+
+- Chome devtools 
+- Redux devtools monitora a store 
+- react devtools 
+
+- LightHouse (dentro do inspect do chrome devtools : gera um report
+de acessibilidade, boas práticas , etc do meu site )
+
+## Tratamento de erros 
+- Resiliência de Software (quando falha o que é mostrado ? )
+- Segurança 
+- Ex SomaSegura: Verifica se os argumentos existem , se são do tipo number senao retorna -1 
+- em forms eh interessante tratar a entrada para evitar roubo de informações 
+- ex: evitar caracteres especiais 
+- tratar se só numeros em campo número , etc 
+- evitar datas inválidas 
+- usuário ou senha inválidas ( evita o roubo de senha por tentativa e erro evitar somente usuario ou somente senha invávaida) 
+-
+- Tratamento de componentes : 
+- Em Js usamos PropTypes 
+- Podemos usar linguagens tipadas como typescript definindo interfaces 
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export const Basic = ({ name }) => (
+    <p>Meu nome é {name}</p>
+)
+
+Basic.propTypes = {
+    name: PropTypes
+}
+
+
+
+
+
 
 
 
