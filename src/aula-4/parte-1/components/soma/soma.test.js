@@ -10,7 +10,7 @@ describe('testando função soma', () => {
 })
 
 defineFeature(feature, test => {
-  test('soma 1 + 2 resulta em 3', ({ given, when, then }) => {
+  test('soma 1 + 2 resulta em 3', ({ given, when, then }) => { /// esse nome deve ser igual do cenário 
     let x;
     let z;
 

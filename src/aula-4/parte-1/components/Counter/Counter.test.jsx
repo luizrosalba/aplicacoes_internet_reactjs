@@ -7,10 +7,10 @@ import { initialState, counterReducer } from '../../../../redux/reducers/counter
 
 function renderWithRedux(
     ui,
-    { initialState, store = createStore(counterReducer, initialState) } = {}
+    { initialState, store = createStore(counterReducer, initialState) } = {} /// cria a store com counter reducer já inicializada 
 ) {
     return {
-        ...render(<Provider store={store}>{ui}</Provider>),
+        ...render(<Provider store={store}>{ui}</Provider>),    
         store
     }
 }
@@ -18,7 +18,7 @@ function renderWithRedux(
 describe('Testando Counter', () => {
     it('O componente Counter deve renderizar corretamente', () => {
         const { getByTestId, getByText } = renderWithRedux(<Counter />)
-        fireEvent.click(getByText('+'))
-        expect(getByTestId('count-value').textContent).toBe('1')
+        fireEvent.click(getByText('+')) /// aciona o botao + 
+        expect(getByTestId('count-value').textContent).toBe('1')  /// o count-value deve ter valor 1 
     })
 })

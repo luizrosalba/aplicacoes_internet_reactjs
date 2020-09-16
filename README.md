@@ -350,6 +350,60 @@ outras libs
 
 ## Aula 4 - Conceitos de Qualidade de código e automação de testes em React 
 
+- TDD e BDD com JEST 
+- DeBugging 
+- Tratamento de erros 
+
+## TDD 
+Desenvolviemnto orientado a teste 
+- escreve um codigo pra testar codigo 
+- QA : Quality Assurance Testador 
+![](img/TDD.PNG)
+- Teste Unitário  (função , componente, serviço ,página ... )
+- Teste End-to-End (E2E) (ponta a ponta)
+- JEST (usa um linguagem Js chamada Jasmine https://jasmine.github.io/) 
+- REact-testing-Library (bom para testar componentes)
+- Shallow 
+- Enzyme 
+- Chai 
+- Mocha 
+- Selenium 
+- Puppeteer 
+
+- npm add --dev @testing-library/react
+
+primeiro os testes mais básicos depois os mais completos 
+
+## BDD 
+Behavior-Driven Development 
+- Une especificação, teste automatizado e premissa de teste (documento de teste)
+- Sintaxe Gherkin 
+- Representa a especificação através de steps para definir cenários 
+- descreve cada funcionalidade por features 
+- 
+Funcionalidade: Loing 
+  Texto com  a descrição da funcionalidade
+Cenário: Como um usuário valido , posso logar no sistema 
+  Dado que estou na tela de Login 
+  Quando digitar credenciais válidas
+  E clicar no botão de login 
+  Então devo acessar a Home do sistema 
+Cenário: Como um usuário invalido , devo visualizar uma mensagem de erro e continuar na página de Login 
+  Dado que estou na tela de Login 
+  Quando digitar credenciais inválidas
+  E clicar no botão de login 
+  Então devo ver uma mensagem de erro
+  E devo estar na tela de login 
+
+- Jest-cucumber
+- npm add --dev jest-cucumber (existe uma extensão para Vs code para .feature)
+- Chai 
+
+
+
+
+
+
 
 
 
