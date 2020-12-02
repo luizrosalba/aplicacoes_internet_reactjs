@@ -3,6 +3,9 @@
 Este código foi produzido com o intuito de prover exemplos ao [curso da Digital Innovation One](https://web.digitalinnovation.one/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/c6a6c9e3-c419-4443-9191-b3bf851d1ce4).
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Tópicos : Estilização inline, classes , styled components. Stateful vs Stateless. Formulários, componentes controlados e não controlados. Flux, Redux. Rest HTTP usando Fetch API (Oferece uma alternativa ao XMLHttpRequest() e jQuery.ajax()). Axios ,uma lib HTTP API , Cross-browser. Imutabilidade e Redux. Comparação shallow (rasa). Redux + Rest , Redux Middlewars, Redux-thunk , redux-saga , TDD e BDD com Jest
+
+
 ## Setup
 
 1. Tenha o [Node.js](https://nodejs.org/en/download/) instalado em seu computador e clone este projeto. Também instale o [Yarn](https://yarnpkg.com/lang/pt-br/docs/install) em sua máquina.
@@ -85,7 +88,7 @@ function Hello(){
 - Class components
 - Function Components 
 - Com hooks estados são manipuláveis em function components (Stateless com Hooks )
-- Dessa forma temos um código compatco com a vantagem de poder manipular estaods 
+- Dessa forma temos um código compacto com a vantagem de poder manipular estaods 
 ### Stateful 
 - Stateful usa estados toda vez que trabalhamos com estados , destruimos uma copia anterior e trabalhamos com uma nova cópia do estado 
 - Supondo um estado chamado shoe, setado inicialmente como ‘tênis’, podemos trocar o seu estado, por ex, usando this.setState({ shoe: 'sapatenis’ }).
@@ -210,11 +213,11 @@ Servem para conectar um ou mais servidores http
 ## Fetch Api 
 Alguns browsers ainda nao suportam (talvez melhor usar node fetch)
 - nativa do browser 
-- Oferece uma alternatuva ai XMLHttpRequest() e jQuery.ajax()
+- Oferece uma alternativa ao XMLHttpRequest() e jQuery.ajax()
 - suporte a service workers
 - algumas diferenças 
 - nao envia nem recebe cookies ( precisa definir a opção cedentials)
-- nao rejeita o statudos do erro HTTP (nem 400 nem 500)
+- nao rejeita o status do erro HTTP (nem 400 nem 500)
 - ele está mostrando como montar os métodos HTTP para nossa api "cientistas" aula 3 . 
 ![](img/get_fetchapi.PNG)
 ![](img/put_fetchapi.PNG)
@@ -250,25 +253,27 @@ Benefícios :
 - para ter performance em React use dados imutáveis 
 - voce consegue usando o shouldComponentUpdate ou o React.PureComponent 
 -  Exemplo : 
+
 ![](img/shouldcomponent.PNG)
 
 - comparação entre virtual dom e o estado do componente dizem se precisa rerenderizar o componente 
 
 - agora usando pure component
+
 ![](img/pure_component.PNG)
 
 - estrutura mais simples 
 - não são todos os casos que conseguimos controlar 
 - o codigo abaixo nao funciona pois o pure componente faz uma coparação rasa entre os valores antigos e novos de this.props.words 
-- o condigo muda words no handleClick do WorkAdder mas mesmo mudando as palavras, elas serão consideradas como iguais 
+- o condigo muda a variável words através de um push no handleClick do WorkAdder mas mesmo mudando as palavras, elas serão consideradas como iguais. 
 
 ![](img/problemas.PNG)
 
-- como vc muda o valor , você nao consegue trabalhr com ela 
+- como vc muda o valor , você nao consegue trabalhar com ela.
 
-- soluçaõ : 
+- solução : 
 
-- evitar mutar valroes ou estados 
+- evitar mutar valores ou estados. Use um spread operator que não altera a variável words. 
 
 ![](img/sol1.PNG)
 - Usando uma biblio de imutabilidade 
@@ -294,7 +299,7 @@ outras libs
 - Por que não funciona com objetos mutáveis ? 
 ![](img/porque.PNG)
 
-## REdux + Rest 
+## Redux + Rest
 
 - Exemplo : Sistema de loggin ou notificações 
 - manter a sincronia independente da tela onde estiver 
@@ -342,6 +347,7 @@ outras libs
 - redux-saga
 
 - um thunk é uma função que chama outra função 
+
 ![](img/thunk.PNG)
 
 - npm add redux-thunk 
